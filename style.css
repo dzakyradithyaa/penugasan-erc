@@ -1,0 +1,340 @@
+/* For ALL */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgba(63, 6, 96, 0.51);
+  /* height: 2500px; */
+}
+
+/* NAVBAR  */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  margin-top: 1.5rem;
+  top: 0;
+  left: 6rem;
+  right: 6rem;
+  padding: 0.8rem 1rem;
+  z-index: 999;
+}
+
+.navbar.scrolled {
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(222, 113, 232, 0.127);
+}
+
+.navbar-logo {
+  font-family: "Mont", sans-serif;
+  font-weight: 600;
+  color: #f7fbf3;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.navbar-nav a {
+  font-weight: 500;
+  color: #f7fbf3;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a::after {
+  content: " ";
+  display: block;
+  /* padding-bottom: 0.5rem; */
+  border-bottom: 0.1rem solid #f7fbf3;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.75);
+}
+/* NAVBAR-END */
+
+/* HERO */
+.hero {
+  align-items: center;
+  display: flex;
+  background-image: url(image/HeroBG.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 8rem 8rem 4rem;
+  gap: 350px;
+}
+.hero-content {
+  font-family: "Mont", sans-serif;
+  color: #f7fbf3;
+}
+.heading {
+  font-weight: 1000;
+  font-size: 40px;
+}
+.content {
+  margin-top: 64px;
+}
+/* ADD MEMBER BUTTON */
+.addMembers {
+  background-color: #8e05c2;
+  border-radius: 20px;
+  color: #fff;
+}
+.addMembers:hover {
+  background-color: #9c769c;
+  border-color: #9c769c;
+  color: #fff;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+.addMembers:focus {
+  box-shadow: none;
+}
+
+/* H1 OUR MEMBER */
+#tabelMember {
+  color: #412d41;
+  text-align: center;
+}
+
+/* CARD MEMBER */
+.card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.section-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 48px;
+  width: 100%;
+  margin-top: 60px;
+}
+.card_img {
+  width: 100%;
+  display: block;
+}
+.card_details {
+  padding: 10px 0;
+}
+.card_details ul {
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px 0;
+}
+.card_details ul li {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px 0;
+}
+.card_details ul li:not(:last-child) {
+  border-bottom: 1px solid #bbb;
+}
+
+/* POP-UP */
+.card-popup {
+  border-radius: 10px;
+  background-color: #412d41;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: #412d41;
+  color: #fff;
+}
+
+/* CARD BUTTON */
+.btn-popup-details {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+.btn-popup-details:hover {
+  text-decoration: none;
+  background-color: #9c769c;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.btn-popup-edit {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+.btn-popup-edit:hover {
+  text-decoration: none;
+  background-color: #9c769c;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.btn-popup-delete {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+.btn-popup-delete:hover {
+  text-decoration: none;
+  background-color: #9c769c;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* POPUP BUTTON */
+.btn-closeFooter {
+  background: #4b4b4b;
+  border-color: #fff;
+  color: #fff;
+}
+.btn-closeFooter:hover {
+  background: #a7a7a7;
+  border-color: #fff;
+  color: #fff;
+}
+.btn-closeFooter:focus {
+  box-shadow: none;
+}
+.btn-close:focus {
+  box-shadow: none;
+}
+
+/* POPUP */
+.modal-content {
+  border-radius: 20px;
+}
+.modal-title {
+  color: #412d41;
+}
+.modal-body form {
+  z-index: 99999;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+}
+.modal-body form .imgholder {
+  position: relative;
+  border-radius: 500px;
+  overflow: hidden;
+}
+.imgholder .upload {
+  position: absolute;
+  bottom: 0;
+  left: 10;
+  width: 100%;
+  height: 100px;
+  background: rgba(65, 44, 65, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.upload i {
+  color: #fff;
+  font-size: 35px;
+}
+.imgholder:hover .upload {
+  display: flex;
+}
+.imgholder .upload input {
+  display: none;
+}
+.modal-body form .inputField {
+  flex-basis: 72%;
+  border-left: 3px solid rgba(49, 29, 49, 0.3);
+  padding-left: 20px;
+}
+form .inputField > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+form .inputField > div label {
+  font-size: 20px;
+  font-weight: 500;
+}
+#userForm form .inputField > div label::after {
+  content: "*";
+  color: red;
+}
+form .inputField > div input {
+  width: 75%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid rgb(168, 166, 166);
+}
+.modal-footer .submit {
+  font-size: 18px;
+  background: #412d41;
+  color: #fff;
+}
+.modal-footer .submit:hover {
+  background: #976397;
+}
+.modal-content .submit:focus {
+  box-shadow: none;
+}
+/* DETAIL BUTTON POPUP */
+#readData form .inputField > div input {
+  font-size: 18px;
+}
+
+/* ABOUT */
+.about {
+  width: 60%;
+  text-align: center;
+}
+#about h1 {
+  text-align: center;
+  color: #412d41;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+#about p {
+  text-align: center;
+  font-size: 25px;
+}
+
+/* FOOTER */
+.footer {
+  color: #412d41;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.footer img {
+  padding-bottom: 10px;
+  width: 50px;
+  height: 50px;
+}

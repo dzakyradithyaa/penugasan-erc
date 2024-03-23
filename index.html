@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!--LINK CDN BOOTSTRAP-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>Elins Research Club</title>
+    <link rel="icon" type="image/x-icon" href="image/logo-ERC-putih.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+
+  <body>
+    <!-- --------------------------nav-------------------------- -->
+    <nav class="navbar">
+      <div class="navbar-logo">Kelompok 1 Web Dev</div>
+      <div class="navbar-nav">
+        <a href="#hero">Home</a>
+        <a href="#member">Our Members</a>
+        <a href="#about">About Us</a>
+      </div>
+
+      <button
+        id="btnAddMembers"
+        class="btn px-3 py-2 addMembers"
+        data-bs-toggle="modal"
+        data-bs-target="#userForm"
+      >
+        Add Members <i class="bi bi-plus-lg"></i>
+      </button>
+    </nav>
+
+    <!-- --------------------------HOME-------------------------- -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1 class="heading">Kelompok 1</h1>
+        <p class="paragraph">Web Development Assignment.</p>
+      </div>
+      <img src="image/hero-content-img.png" alt="" class="logoImg" />
+    </section>
+
+    <!-- Member -->
+    <section class="p-5" id="member">
+      <div class="row">
+        <div class="col-12">
+          <h1 id="tabelMember" class="fw-bold">Our Member</h1>
+          <div id="data"></div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------ POP UP CARD -->
+    <section class="section-card card-1 card_img card_details"></section>
+
+    <!--Pop Up Form-->
+    <div class="modal fade" id="userForm">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title px-3 py-2 fw-bold">Welcome Aboard!</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form action="#" id="myForm">
+              <div class="card imgholder">
+                <label for="imgInput" class="upload">
+                  <input type="file" name="" id="imgInput" />
+                  <i class="bi bi-plus-circle-dotted"></i>
+                </label>
+                <img src="image/Profile Icon.webp" alt="" class="img" />
+              </div>
+
+              <div class="inputField">
+                <div>
+                  <label for="name">Name:</label>
+                  <input type="text" name="" id="name" required />
+                </div>
+                <div>
+                  <label for="city">Asal:</label>
+                  <input type="text" name="" id="city" required />
+                </div>
+                <div>
+                  <label for="hobi">Hobi:</label>
+                  <input type="text" name="" id="hobi" required />
+                </div>
+                <div>
+                  <label for="quotes">Quotes:</label>
+                  <input type="text" name="" id="quotes" required />
+                </div>
+                <div>
+                  <label for="alasan">Alasan Join ERC:</label>
+                  <input type="text" name="" id="alasan" required />
+                </div>
+                <div>
+                  <label for="medsos">Instagram:</label>
+                  <input type="text" name="" id="medsos" required />
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-closeFooter"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" form="myForm" class="btn submit">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Read Data Pop Up-->
+    <div class="modal fade" id="readData">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Profile</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form action="#" id="myForm">
+              <div class="card imgholder">
+                <img
+                  src="./image/Profile Icon.webp"
+                  alt=""
+                  width="200"
+                  height="200"
+                  class="showImg"
+                />
+              </div>
+
+              <div class="inputField">
+                <div>
+                  <label for="name">Name:</label>
+                  <input type="text" name="" id="showName" disabled />
+                </div>
+                <div>
+                  <label for="city">Asal:</label>
+                  <input type="text" name="" id="showCity" disabled />
+                </div>
+                <div>
+                  <label for="hobi">Hobi:</label>
+                  <input type="text" name="" id="showHobi" disabled />
+                </div>
+                <div>
+                  <label for="quotes">Qoutes:</label>
+                  <input type="text" name="" id="showQuotes" disabled />
+                </div>
+                <div>
+                  <label for="alasan">Alasan Join ERC:</label>
+                  <input type="text" name="" id="showAlasan" disabled />
+                </div>
+                <div>
+                  <label for="medsos">Instagram:</label>
+                  <input type="text" name="" id="showMedsos" disabled />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------ABOUT-------------------------- -->
+    <section id="about">
+      <div class="container justify-content-center about">
+        <h1 class="fw-bold">About Us</h1>
+        <p class="p">
+          This web development project was proudly done by our group as an
+          assignment that was given to us as a requirement to join the ELINS
+          Research Club Web Development group.
+        </p>
+      </div>
+    </section>
+
+    <!-- --------------------------FOOTER-------------------------- -->
+    <svg
+      width="100%"
+      height="100%"
+      id="svg"
+      viewBox="0 0 1440 590"
+      xmlns="http://www.w3.org/2000/svg"
+      class="transition duration-300 ease-in-out delay-150"
+    >
+      <style>
+        .path-1 {
+          animation: pathAnim-1 4s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+        @keyframes pathAnim-1 {
+          0% {
+            d: path(
+              "M 0,600 L 0,350 C 76.88995215311004,327.72248803827756 153.7799043062201,305.44497607655506 263,311 C 372.2200956937799,316.55502392344494 513.7703349282297,349.9425837320574 606,364 C 698.2296650717703,378.0574162679426 741.1387559808611,372.78468899521533 839,370 C 936.8612440191389,367.21531100478467 1089.6746411483255,366.91866028708137 1199,364 C 1308.3253588516745,361.08133971291863 1374.1626794258373,355.5406698564593 1440,350 L 1440,600 L 0,600 Z"
+            );
+          }
+          25% {
+            d: path(
+              "M 0,600 L 0,350 C 76.66985645933013,367.87559808612446 153.33971291866027,385.75119617224885 238,400 C 322.66028708133973,414.24880382775115 415.3110047846891,424.87081339712915 525,406 C 634.6889952153109,387.12918660287085 761.4162679425838,338.7655502392344 856,341 C 950.5837320574162,343.2344497607656 1013.0239234449759,396.066985645933 1105,406 C 1196.976076555024,415.933014354067 1318.488038277512,382.96650717703346 1440,350 L 1440,600 L 0,600 Z"
+            );
+          }
+          50% {
+            d: path(
+              "M 0,600 L 0,350 C 77.12918660287082,349.0143540669857 154.25837320574163,348.0287081339713 245,340 C 335.74162679425837,331.9712918660287 440.0956937799043,316.89952153110045 538,313 C 635.9043062200957,309.10047846889955 727.3588516746411,316.3732057416268 832,309 C 936.6411483253589,301.6267942583732 1054.468899521531,279.60765550239233 1158,284 C 1261.531100478469,288.39234449760767 1350.7655502392345,319.1961722488038 1440,350 L 1440,600 L 0,600 Z"
+            );
+          }
+          75% {
+            d: path(
+              "M 0,600 L 0,350 C 103.79904306220098,304.57416267942585 207.59808612440196,259.14832535885165 309,286 C 410.40191387559804,312.85167464114835 509.4066985645933,411.98086124401914 616,412 C 722.5933014354067,412.01913875598086 836.7751196172248,312.9282296650718 915,289 C 993.2248803827752,265.0717703349282 1035.4928229665072,316.3062200956938 1117,339 C 1198.5071770334928,361.6937799043062 1319.2535885167463,355.8468899521531 1440,350 L 1440,600 L 0,600 Z"
+            );
+          }
+          100% {
+            d: path(
+              "M 0,600 L 0,350 C 76.88995215311004,327.72248803827756 153.7799043062201,305.44497607655506 263,311 C 372.2200956937799,316.55502392344494 513.7703349282297,349.9425837320574 606,364 C 698.2296650717703,378.0574162679426 741.1387559808611,372.78468899521533 839,370 C 936.8612440191389,367.21531100478467 1089.6746411483255,366.91866028708137 1199,364 C 1308.3253588516745,361.08133971291863 1374.1626794258373,355.5406698564593 1440,350 L 1440,600 L 0,600 Z"
+            );
+          }
+        }
+      </style>
+      <path
+        d="M 0,600 L 0,350 C 76.88995215311004,327.72248803827756 153.7799043062201,305.44497607655506 263,311 C 372.2200956937799,316.55502392344494 513.7703349282297,349.9425837320574 606,364 C 698.2296650717703,378.0574162679426 741.1387559808611,372.78468899521533 839,370 C 936.8612440191389,367.21531100478467 1089.6746411483255,366.91866028708137 1199,364 C 1308.3253588516745,361.08133971291863 1374.1626794258373,355.5406698564593 1440,350 L 1440,600 L 0,600 Z"
+        stroke="none"
+        stroke-width="0"
+        fill="#412d41"
+        fill-opacity="1"
+        class="transition-all duration-300 ease-in-out delay-150 path-1"
+      ></path>
+      <image
+        xlink:href="image/logo-ERC-putih.svg"
+        width="60"
+        height="60"
+        x="680"
+        y="460"
+      />
+
+      <!-- Teks hak cipta -->
+      <text x="480" y="550" font-family="Arial" font-size="16" fill="#FFF">
+        © Copyright 2024 - Kelompok 1 WebDev ERC. All Right Reserved
+      </text>
+    </svg>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script src="back-end.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      // GSAP
+      let logoImg = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#member",
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      });
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".card",
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      });
+      logoImg.to(".logoImg", {
+        opacity: 0,
+        y: 50,
+        scale: 1.15,
+      });
+      tl.from(".card", {
+        x: -50,
+        opacity: 0,
+      });
+      tl.to(".card", {
+        x: 10,
+        opacity: 1,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+@media screen and (max-width: 1366px) {
+  /*jika < 1366, maka*/
+  .modal-body form .imgholder {
+    width: 200px;
+    height: 200px;
+  }
+  .modal-body img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  /*jika < 1000, maka*/
+  .modal-body form .imgholder {
+    width: 120px;
+    height: 120px;
+  }
+  .modal-body img {
+    width: 120px;
+    height: 120px;
+  }
+  .section-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .btn-container .btn {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  /*jika < 576, maka*/
+  .modal-body form .imgholder {
+    width: 100px;
+    height: 100px;
+  }
+  .modal-body img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* CSS tombol saat ukuran layar lebih kecil dari 1300px */
+@media screen and (max-width: 1300px) {
+  .btn-popup-details,
+  .btn-popup-edit,
+  .btn-popup-delete {
+    font-size: 0;
+  }
+  /* Details */
+  .btn-popup-details::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("image/eye.svg");
+    background-size: cover;
+  }
+  /* Edit */
+  .btn-popup-edit::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("image/pencil.svg");
+    background-size: cover;
+  }
+  /* Delete */
+  .btn-popup-delete::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("image/trash.svg");
+    background-size: cover;
+  }
+}

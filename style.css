@@ -326,3 +326,9 @@ form .inputField > div input {
   text-align: center;
   font-size: 25px;
 }
+
+/* MEMBER */
+#member p {
+  text-align: center;
+  font-style: italic;
+}

@@ -1,4 +1,4 @@
-//JS LOCAL STORAGE
+//JS inisialisiasi
 var form = document.getElementById("myForm"),
   imgInput = document.querySelector(".img"),
   file = document.getElementById("imgInput"),
@@ -14,10 +14,12 @@ var form = document.getElementById("myForm"),
   modalTitle = document.querySelector("#userForm .modal-title"),
   addMembersBtn = document.querySelector(".addMembers");
 
+// JS LOCAL STORAGE
 let getData = localStorage.getItem("userProfile")
   ? JSON.parse(localStorage.getItem("userProfile"))
   : [];
 
+//EDIT LOCAL STORAGE
 let isEdit = false,
   editId;
 showInfo();
